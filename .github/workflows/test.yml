@@ -1,0 +1,27 @@
+# This is a basic workflow to help you get started with Actions
+
+name: first
+
+# Controls when the workflow will run
+on: push
+jobs:
+       job1:
+               name: First Job
+               runs-on: ubuntu-latest
+               steps:
+               - name: Step 1
+                 uses: actions/checkout@v2
+               - name: Step 2
+                 run: env | sort
+       job2:
+                 name: Seconde Job
+                 runs-on: windows-latest
+                 steps:
+                  - name: Step 1
+                    uses: actions/checkout@v2
+                  - name: Step 2
+                    run: "Get-ChildItem Env: | Sort-Object Name"
+               
+              
+
+  
