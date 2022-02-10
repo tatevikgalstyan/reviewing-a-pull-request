@@ -9,29 +9,33 @@ jobs:
                name: First Job
                runs-on: ubuntu-latest
                steps:
-               - name: Step 1
-                 id: date
-                 run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+               - name: Set current date as env variable
+                 run: echo "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+               - name: Echo current date
+                 run: echo $NOW
        job2:
                  name: Seconde Job
                  runs-on: windows-latest
                  steps:
-                 - name: Step 1
-                   id: date
-                   run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+                 - name: Set current date as env variable
+                   run: echo "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+                 - name: Echo current date
+                   run: echo $NOW
        job3: 
                  name: Thirth Job
                  runs-on: macos-latest
                  steps:
-                 - name: Step 1
-                   id: date
-                   run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+                 - name: Set current date as env variable
+                   run: echo "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+                 - name: Echo current date
+                   run: echo $NOW
                  
        job4: 
                 name: Forth Job
                 runs-on: macos-10.15
                 steps:
-                 - name: Step 1
-                   id: date
-                   run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+                - name: Set current date as env variable
+                  run: echo "NOW::$(date +'%Y-%m-%dT%H:%M:%S')" >> $GITHUB_ENV
+                - name: Echo current date
+                  run: echo $NOW
                  
