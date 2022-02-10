@@ -1,0 +1,17 @@
+name: date
+on: push
+jobs:
+  job1:
+    name: MacOs Version
+    runs-on: macos-latest
+    steps:
+    - name: Affiche la date sur macos
+      run: date
+   job2:
+     name: Win version
+     runs-on: Windows-latest
+      steps:
+    - name: Affiche la date sur macos
+      run: Get-Date
+     
+     
